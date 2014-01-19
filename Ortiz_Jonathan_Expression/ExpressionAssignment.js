@@ -73,6 +73,24 @@ prompt( "(>^^)> cacualting... ");
 
 console.log(FullName + " your company makes " + YearIncome + " a year and spends:");
 console.log( "Bills = " + YearBills);
-console.log(" After Bills :" + TotalAfterBills);
-console.log(" A single Empolyee's salary is " + YearSalary + " All Empolyees's year salaries is " +AllEmpolyeesSalary )
-console.log(" Your company has ")
+console.log(" After Bills : $" + TotalAfterBills);
+console.log(" A single Empolyee's salary is $" + YearSalary + " Base on 8 hours a week and work five days of work  " +
+    " All Empolyees's year salaries is $" +AllEmpolyeesSalary );
+console.log( FullName + " your company as a remainder of $" + TotalAfterEmpolyees);
+
+// Wackly
+
+if( TotalAfterEmpolyees > 0){
+    console.log(" Good Job your company didn't go Under");
+}
+else if( TotalAfterEmpolyees < 0){
+        console.log("(>^^)> i suggest you file for bank rupcly ");
+}
+
+var YorN = prompt ("(>^^)> Did you Enjoy Math bot? Y or n: ")
+
+if( YorN == 'n' || YorN == 'N'){
+    console.log(" Blame the teacher.")
+}else if(YorN == 'y' || YorN == 'Y'){
+    console.log(" Thank you " + FullName + " you are a wonderful person.")
+}else{console.log(" Error 101 User is special");}
