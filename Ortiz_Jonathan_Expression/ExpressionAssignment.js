@@ -1,15 +1,8 @@
 /**
  * Created by Spike1367 on 1/18/14.
  */
-
-
-
 // Creating Assigment again after deleting with new Repositorie
-
-
 // Personal
-
-
 // Creating String and minipulating strings.
 var First = prompt(" (>^ ^)> { What is your First name:}");
 var Last = prompt("(>^ ^)>  { What is your Last name: }");
@@ -28,16 +21,17 @@ UserNumbers[1] = prompt(" (>^ ^)> { Choose a number for B:");
 UserNumbers[2] = prompt(" <(^ ^)> { Choose a number for C:");
 UserNumbers[3] = prompt(" (^ ^)[Last one]{ Choose a number for D:");
 
-// Display User's Input
+// Display User's Inputs
 console.log("(>^ ^)> { Your choices are: ");
 console.log("A = " + UserNumbers[0]);
 console.log("B = " + UserNumbers[1]);
 console.log("C = " + UserNumbers[2]);
 console.log("D = " + UserNumbers[3]);
 
-// Total of all UserInput
+// Total of all UserInputs
 var total = parseFloat(UserNumbers[0]) + parseFloat(UserNumbers[1]) + parseFloat(UserNumbers[2]) + parseFloat(UserNumbers[3]);
 var average = total / 4;
+
 // Adding fraction
 var fractionAddTop = parseFloat(UserNumbers[0]) + parseFloat(UserNumbers[2]);
 var fractionAddBottom = parseFloat(UserNumbers[1]) + parseFloat(UserNumbers[3]);
@@ -59,8 +53,8 @@ prompt(" (>^ ^)> Math bot can also keep track out Company Spending:");
 // Ask User for Inputs
 var income = prompt("(>^^)> How much does your company make per month?");
 var NunmberOfEmpolyees = prompt("(>^^)> How many empolyees do you have: ");
-var empolyeesSalary = prompt("(>^^)> How much do they get paid an hour:")
-var Bills = prompt(("(>^^)> How much is Bills each month: "));
+var empolyeesSalary = prompt("(>^^)> How much do they get paid per hour:")
+var Bills = prompt(("(>^^)> How much are Bills each month: "));
 
 // Made varaibles for year                   - 8 hours it average number of work days.
 var YearSalary = parseInt(empolyeesSalary) * 8 * 248; // 248 number of days in a year without weekends or holidays
@@ -80,14 +74,14 @@ prompt( "(>^^)> cacualting... ");
 console.log(FullName + " your company makes " + YearIncome + " a year and spends:");
 console.log( "Year Bills = $" + YearBills);
 console.log(" After Bills : $" + TotalAfterBills);
-console.log(" A single Empolyee's salary per year  is $" + YearSalary + " Base on 8 hours a week and work five days of work  " +
+console.log(" A single Empolyee's salary per year  is $" + YearSalary + " Base on 8 hours a day and works five days a week.  " +
     " All Empolyees's year salaries is $" +AllEmpolyeesSalary );
 console.log( FullName + " your company has a remainder of $" + TotalAfterEmpolyees);
 
 // Wackly
 
 if( TotalAfterEmpolyees > 0){
-    console.log(" (>^^)>Good Job your company didn't go Under");
+    console.log(" (>^^)> Good Job your company didn't go Under");
 }
 else if( TotalAfterEmpolyees < 0){
         console.log("(>^^)> i suggest you file for bankruptcy.");
