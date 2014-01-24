@@ -6,6 +6,10 @@ var Quit = true;
 // Created varibale for User's Name
 var playerName = prompt(" Enter your name:");
 
+var UserScore = 0;
+var ComputerScore = 0;
+var Tie = 0;
+
 // Display friendly message to user
 prompt(" (>^^)> -  Hello " + playerName + " Lets play Rock, Paper , sisscors" + "\n"+" Hit enter to countiune...)");
 
@@ -48,31 +52,40 @@ var UserChoice = prompt(" Here are your choices: " + "\n" + "1) Rock" + "\n" + "
     // Determine Tie
     if(parseInt(UserChoice) == Rock && computerChoice == Rock){
         prompt(" Rocks Tie");
+        Tie++;
     }else if(parseInt(UserChoice) == Paper && computerChoice == Paper){
         prompt(" Papers Tie");
+        Tie++
     }else if( parseInt(UserChoice) == Sisscors && computerChoice == Sisscors){
         prompt(" Sisscors Tie");
+        Tie++;
     }
-    if( parseInt(UserChoice) == 4 ){ Quit = false}
+    if( UserChoice == 4 ){ Quit = false}
 
 
     // Determine Winner if user choices rock
     if( parseInt(UserChoice) == Rock && computerChoice == Paper){
         prompt("User losses paer covers rock  ");
+        ComputerScore++;
     }else if( parseInt(UserChoice) == Rock && computerChoice == Sisscors){
         prompt("User Wins rock smashes sisscors");
+        UserScore++;
     }
     // Determine Winner if user choices Paper
     if( parseInt(UserChoice) == Paper && computerChoice == Rock){
-        prompt("User win paper covers rock")
+        prompt("User win paper covers rock");
+        UserScore++;
     }else if( parseInt(UserChoice) == Paper && computerChoice == Sisscors){
-        prompt("User loses sisscors cuts paper")
+        prompt("User loses sisscors cuts paper");
+        ComputerScore++;
     }
     // Determine Winner if user choices Sisscors
     if( parseInt(UserChoice) == Sisscors && computerChoice == Rock){
         prompt("User losses rock smashes sisscors");
+        ComputerScore++;
     }else if( parseInt(UserChoice) == Sisscors && computerChoice ==Paper ){
         prompt("User Wins sisscors cut paper");
+        UserScore++;
     }
 
 }
