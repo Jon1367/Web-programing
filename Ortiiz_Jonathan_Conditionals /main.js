@@ -40,40 +40,39 @@ var UserChoice = prompt(" Here are your choices: " + "\n" + "1) Rock" + "\n" + "
     if( computerChoice == Rock){
         prompt(" Computer choices Rock");
     }else if(computerChoice === Paper){
-        prompt("Computer choices Paper")
+        prompt("Computer choices Paper");
     }else if(computerChoice == Sisscors){
-        prompt("Computer choices Sisscors")
+        prompt("Computer choices Sisscors");
     }
 
     // Determine Tie
     if(parseInt(UserChoice) == Rock && computerChoice == Rock){
         prompt(" Rocks Tie");
     }else if(parseInt(UserChoice) == Paper && computerChoice == Paper){
-        prompt(" Papers Tie")
+        prompt(" Papers Tie");
     }else if( parseInt(UserChoice) == Sisscors && computerChoice == Sisscors){
-        prompt(" Sisscors Tie")
+        prompt(" Sisscors Tie");
     }
     if( parseInt(UserChoice) == 4 ){ Quit = false}
 
 
-    // Determine Winner
+    // Determine Winner if user choices rock
     if( parseInt(UserChoice) == Rock && computerChoice == Paper){
-        prompt("User losses ")
+        prompt("User losses paer covers rock  ");
     }else if( parseInt(UserChoice) == Rock && computerChoice == Sisscors){
-        prompt("User Wins")
+        prompt("User Wins rock smashes sisscors");
     }
-
+    // Determine Winner if user choices Paper
     if( parseInt(UserChoice) == Paper && computerChoice == Rock){
-        prompt("User win ")
+        prompt("User win paper covers rock")
     }else if( parseInt(UserChoice) == Paper && computerChoice == Sisscors){
-        prompt("User loses")
+        prompt("User loses sisscors cuts paper")
     }
-
-
+    // Determine Winner if user choices Sisscors
     if( parseInt(UserChoice) == Sisscors && computerChoice == Rock){
-        prompt("User losses ")
+        prompt("User losses rock smashes sisscors");
     }else if( parseInt(UserChoice) == Sisscors && computerChoice ==Paper ){
-        prompt("User Wins")
+        prompt("User Wins sisscors cut paper");
     }
 
 }
