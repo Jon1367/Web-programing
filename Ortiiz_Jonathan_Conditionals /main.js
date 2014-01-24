@@ -27,7 +27,12 @@ var Sisscors = 3;
 
 // Display options to user
 var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "\n" + "2) Paper" + "\n" + "3) Sisscors"
-    + "4) Quit");
+    + "\n" + "4) Quit");
+
+    // Check if user enter correct input
+    if( UserChoice != Rock && UserChoice != Paper && UserChoice != Sisscors && UserChoice != 4){
+        prompt(" Error 101: User did not enter correct input.Hit enter to return to choices. ")
+    }
 
     // if statements to exit loop
     if( UserChoice == 4 ){ Quit = false}
@@ -69,7 +74,7 @@ var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "
         prompt("(>^^)> computer wins! paper covers rock  ");
         ComputerScore++;
     }else if( parseInt(UserChoice) == Rock && computerChoice == Sisscors){
-        prompt(playerName + "wins!rock smashes sisscors.");
+        prompt(playerName + " wins! rock smashes sisscors.");
         UserScore++;
     }
     // Determine Winner if user choices Paper
@@ -85,7 +90,7 @@ var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "
         prompt("(>^^)> computer wins! rock smashes sisscors.");
         ComputerScore++;
     }else if( parseInt(UserChoice) == Sisscors && computerChoice ==Paper ){
-        prompt(playerName + "Wins! sisscors cut paper.");
+        prompt(playerName + " Wins! sisscors cut paper.");
         UserScore++;
     }
 
