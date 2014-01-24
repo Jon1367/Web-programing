@@ -25,7 +25,7 @@ var UserChoice = prompt(" Here are your choices: " + "\n" + "1) Rock" + "\n" + "
     + "4) Quit");
 
     // if statements to exit loop
-    if( parseInt(UserChoice) == 4 ){ Quit = false}
+    if( UserChoice == 4 ){ Quit = false}
 
     // Display User choice
     if( parseInt(UserChoice) == Rock){
@@ -34,7 +34,7 @@ var UserChoice = prompt(" Here are your choices: " + "\n" + "1) Rock" + "\n" + "
         prompt(playerName + " choices Paper")
     }else if(parseInt(UserChoice) == Sisscors){
         prompt(playerName + " choices Sisscors")
-    }else{ Quit = true}
+    }
 
     // Display Computer choice
     if( computerChoice == Rock){
@@ -43,7 +43,7 @@ var UserChoice = prompt(" Here are your choices: " + "\n" + "1) Rock" + "\n" + "
         prompt("Computer choices Paper")
     }else if(computerChoice == Sisscors){
         prompt("Computer choices Sisscors")
-    }else{ Quit = true}
+    }
 
     // Determine Tie
     if(parseInt(UserChoice) == Rock && computerChoice == Rock){
@@ -53,8 +53,27 @@ var UserChoice = prompt(" Here are your choices: " + "\n" + "1) Rock" + "\n" + "
     }else if( parseInt(UserChoice) == Sisscors && computerChoice == Sisscors){
         prompt(" Sisscors Tie")
     }
+    if( parseInt(UserChoice) == 4 ){ Quit = false}
+
 
     // Determine Winner
-    if( parseInt(UserChoice))
+    if( parseInt(UserChoice) == Rock && computerChoice == Paper){
+        prompt("User losses ")
+    }else if( parseInt(UserChoice) == Rock && computerChoice == Sisscors){
+        prompt("User Wins")
+    }
+
+    if( parseInt(UserChoice) == Paper && computerChoice == Rock){
+        prompt("User win ")
+    }else if( parseInt(UserChoice) == Paper && computerChoice == Sisscors){
+        prompt("User loses")
+    }
+
+
+    if( parseInt(UserChoice) == Sisscors && computerChoice == Rock){
+        prompt("User losses ")
+    }else if( parseInt(UserChoice) == Sisscors && computerChoice ==Paper ){
+        prompt("User Wins")
+    }
 
 }
