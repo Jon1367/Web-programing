@@ -1,7 +1,7 @@
-/**
- * Created by Spike1367 on 1/18/14.
- */
+// Created by Jonathan Ortiz
+
 // Creating Assigment again after deleting with new Repositorie
+
 // Personal
 // Creating String and minipulating strings.
 var First = prompt(" (>^ ^)> { What is your First name:}");
@@ -10,9 +10,10 @@ var FullName = First +" " +  Last;
 var UserNumbers = [];
 var NameLength = First.length + Last.length;
 
-// Display Name of User and (>^^>
+// Display Name of User and (>^^)>
 prompt(" (>^ ^)> Hello " + FullName + " it's nice to meet you. My name is Math bot let me show you what i can do.");
 
+// displays the total of the user's name length
 console.log( FullName + " you have a total of " + NameLength + " letters in your name." )
 
 // Array to store users input
@@ -80,6 +81,8 @@ console.log( FullName + " your company has a remainder of $" + TotalAfterEmpolye
 
 // Wackly
 
+
+// If statment to see if you company is doing well
 if( TotalAfterEmpolyees > 0){
     console.log(" (>^^)> Good Job your company didn't go Under");
 }
@@ -87,8 +90,11 @@ else if( TotalAfterEmpolyees < 0){
         console.log("(>^^)> i suggest you file for bankruptcy.");
 }
 
+// Ask if user enjoyed program
 var YorN = prompt ("(>^^)> Did you Enjoy Math bot? Y or n: ")
 
+
+// If state if user enter correct infromation
 if( YorN == 'n' || YorN == 'N'){
     console.log(" Blame the teacher.")
 }else if(YorN == 'y' || YorN == 'Y'){
