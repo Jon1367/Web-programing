@@ -1,3 +1,5 @@
+// Created by Jonathan Ortiz
+
 // Assignment Conditionals
 
 // Created Quit variable for while condition
@@ -27,7 +29,7 @@ var Sisscors = 3;
 
 // Display options to user
 var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "\n" + "2) Paper" + "\n" + "3) Sisscors"
-    + "\n" + "4) Quit");
+    + "\n" + "4) Quit or Next game");
 
     // Check if user enter correct input
     if( UserChoice != Rock && UserChoice != Paper && UserChoice != Sisscors && UserChoice != 4){
@@ -94,6 +96,20 @@ var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "
         UserScore++;
     }
 
-    prompt(playerName + " Score = " + UserScore + "\n" +" Computer Score = " + ComputerScore + "\n"+" Tie = " + Tie  );
+    prompt(playerName + " Score = " + UserScore + "\n" +"Computer Score = " + ComputerScore + "\n"+" Tie = " + Tie  );
+
+}
+
+var GuessingGame = true;
+
+while(GuessingGame){
+
+  var UserGuess = prompt (" (>^^)> Welcome to my Guessing Game. " + "\n" +" Guess my Number between 1 - 100");
+  var ComputerGuess = Math.floor(Math.random() * (100 + 1 -1 ) + 1);
+
+
+   if(UserGuess == 4){ GuessingGame = false}
+
+
 
 }
