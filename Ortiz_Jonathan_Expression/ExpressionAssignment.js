@@ -2,7 +2,7 @@
 
 // Creating Assigment again after deleting with new Repositorie
 
-// Personal
+// ---Personal---
 // Creating String and minipulating strings.
 var First = prompt(" (>^ ^)> { What is your First name:}");
 var Last = prompt("(>^ ^)>  { What is your Last name: }");
@@ -48,7 +48,7 @@ console.log(" A + B + C + D = " + total + " The average is: " + average);
 console.log(" A/B + C/D = " + fractionAddTop + " / " + fractionAddBottom + " = " + totalfraction);
 console.log(" A/B * C/D = " + fractionMuiltTop + " / " + fractionMuiltBottom + " = " + muiltFraction);
 
-// Industry
+// ---Industry---
 prompt(" (>^ ^)> Math bot can also keep track out Company Spending:");
 
 // Ask User for Inputs
@@ -79,7 +79,21 @@ console.log(" A single Empolyee's salary per year  is $" + YearSalary + " Base o
     " All Empolyees's year salaries is $" +AllEmpolyeesSalary );
 console.log( FullName + " your company has a remainder of $" + TotalAfterEmpolyees);
 
-// Wackly
+// ---Wackly---
+
+// Display final program
+prompt(" (>^^)> Math bot is going to show you how it can run a store like  Megaton clinic from Fallout 3");
+
+
+var Buying = true;
+var items = ["Stimpak","Jet","Doctor Bag"];
+var itemscost = [20, 10 , 50];
+
+while(Buying){
+
+
+}
+
 
 
 // If statment to see if you company is doing well
