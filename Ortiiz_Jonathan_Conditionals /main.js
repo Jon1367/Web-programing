@@ -95,18 +95,27 @@ var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "
         prompt(playerName + " Wins! sisscors cut paper.");
         UserScore++;
     }
-
+    // Show the User The scores
     prompt(playerName + " Score = " + UserScore + "\n" +"Computer Score = " + ComputerScore + "\n"+" Tie = " + Tie  );
 
 }
 
 var GuessingGame = true;
+var NumberOfUserGuess = 0;
+var NumberOfWins = 0;
 
 while(GuessingGame){
 
-  var UserGuess = prompt (" (>^^)> Welcome to my Guessing Game. " + "\n" +" Guess my Number between 1 - 100");
+  var UserGuess = prompt (" (>^^)> Welcome to my Guessing Game. " + "\n" +" Guess my Number between 1 - 100" + "\n"+"4)Quit");
   var ComputerGuess = Math.floor(Math.random() * (100 + 1 -1 ) + 1);
 
+   if( UserGuess < ComputerGuess){
+       prompt(playerName + " Guess too low");
+   }else if( UserChoice > ComputerGuess){
+       prompt(playerName + " Guess too High Guess");
+   }else if( UserChoice == ComputerGuess ){
+
+   }
 
    if(UserGuess == 4){ GuessingGame = false}
 
