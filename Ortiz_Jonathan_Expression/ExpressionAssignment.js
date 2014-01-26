@@ -94,20 +94,27 @@ var itemscost = [20, 10 , 50];
 // User amount of caps from his adventures in the waste land
 var caps = 3000;
 
+
+
 while(Buying){
 
     var itemspurches = prompt(" (>^^)> Welcome wastelander " + FullName +" to Megaton clinic here are the my item for sale:"+
-    "\n"+ FullName + "Ammount of caps = " + caps + "\n" + "1) " + items[0] + "\n" + "2) " + items[1] + "\n" + "3) " + items[2] + "\n" +"4) Cash out" );
+    "\n"+ FullName + "Ammount of caps = " + caps + "\n" + "1) " + items[0] + "\n" + "2) " + items[1] + "\n" + "3) " + items[2]
+        + "\n" +"4) Cash out" );
 
     // If statement  used to exit the loop
     if( itemspurches == 4){Buying = false}
 
     //if statement to add up user answer
-    if( parseInt(itemspurches) == items[0]){
-        caps = caps - itemscost[0]
-        var ammount = prompt(" That will be 20 caps, How much do you want to buy?" );
-    }else if( parseInt(itemspurches) == items[1]){
-
+    if( parseInt(itemspurches) == 1){
+        var ammount = prompt(items[0] + " Cost " + itemscost[0] +  " How much do you want to buy?" );
+        caps = caps - itemscost[0] * parseInt(ammount);
+    }else if( parseInt(itemspurches) == 2){
+        var ammount2 = prompt(items[1] + " Cost " + itemscost[1] +  " How much do you want to buy?" );
+        caps = caps - itemscost[1] * parseInt(ammount2);
+    }else if( parseInt(itemspurches) == 3){
+        var ammount3 = prompt(items[2] + " Cost " + itemscost[2] +  " How much do you want to buy?" );
+        caps = caps - itemscost[2] * parseInt(ammount3);
     }
 
 }
