@@ -94,13 +94,18 @@ var itemscost = [20, 10 , 50];
 // User amount of caps from his adventures in the waste land
 var caps = 3000;
 
+var toatl = [];
+
 
 
 while(Buying){
 
     var itemspurches = prompt(" (>^^)> Welcome wastelander " + FullName +" to Megaton clinic here are the my item for sale:"+
-    "\n"+ FullName + "Ammount of caps = " + caps + "\n" + "1) " + items[0] + "\n" + "2) " + items[1] + "\n" + "3) " + items[2]
-        + "\n" +"4) Cash out" );
+    "\n"+ FullName + " Ammount of caps = " + caps +  "caps" + "\n" +
+        "1) " + items[0]+ " cost: " + itemscost[0] +" caps" +  "\n" +
+        "2) " + items[1]+ " cost: " + itemscost[1] +" caps" + "\n" +
+        "3) " + items[2]+ " cost: " + itemscost[2] +" caps" + "\n" +
+        "4) Cash out" );
 
     // If statement  used to exit the loop
     if( itemspurches == 4){Buying = false}
@@ -109,6 +114,7 @@ while(Buying){
     if( parseInt(itemspurches) == 1){
         var ammount = prompt(items[0] + " Cost " + itemscost[0] +  " How much do you want to buy?" );
         caps = caps - itemscost[0] * parseInt(ammount);
+        total[0] = items[0] + ammount
     }else if( parseInt(itemspurches) == 2){
         var ammount2 = prompt(items[1] + " Cost " + itemscost[1] +  " How much do you want to buy?" );
         caps = caps - itemscost[1] * parseInt(ammount2);
@@ -119,7 +125,7 @@ while(Buying){
 
 }
 
-
+prompt(" You have a remainder of : " + caps);
 
 // If statment to see if you company is doing well
 if( TotalAfterEmpolyees > 0){
