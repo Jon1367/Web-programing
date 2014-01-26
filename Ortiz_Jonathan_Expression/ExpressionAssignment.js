@@ -94,11 +94,12 @@ var itemscost = [20, 10 , 50];
 // User amount of caps from his adventures in the waste land
 var caps = 3000;
 
-
+// Variables for total ammount bought
 var totalStimpak = 0;
 var totalJet = 0;
 var totaDoctorBag = 0;
 
+// total spent amount on each item
 var spentStimpak = 0;
 var spentJet = 0;
 var spentDoctorBag = 0;
@@ -120,10 +121,18 @@ while(Buying){
 
     //if statement to add up user answer
     if( parseInt(itemspurches) == 1){
+        // Ask user if He wants to buy muilt of this item
         var ammount = prompt(items[0] + " Cost " + itemscost[0] +  " How much do you want to buy?" );
+        // store total amount spent then substract it by total amount of caps
         caps = caps - itemscost[0] * parseInt(ammount);
+
+        // Stores the total amount of items bought for this item
         totalStimpak +=  parseInt(ammount);
+
+        // stores the total amount spent on this item indculding the ammount
         spentStimpak += parseInt(ammount) * parseInt(itemscost[0]);
+
+        // countiune on with rest of items
     }else if( parseInt(itemspurches) == 2){
         var ammount2 = prompt(items[1] + " Cost " + itemscost[1] +  " How much do you want to buy?" );
         caps = caps - itemscost[1] * parseInt(ammount2);
@@ -137,7 +146,7 @@ while(Buying){
     }
 
 }
-// Display remainder of user's caps
+// Display remainder of user's caps and total items bought and spent
 prompt(" You have a remainder of : " + caps + "cps" +"\n" +
     "Total Stimpak bought:" + totalStimpak +" spent : "+ spentStimpak +" cps" +  "\n" +
     "Total Jet bought: " + totalJet +"  spent :" + spentJet  +" cps " + "\n" +
