@@ -94,8 +94,14 @@ var itemscost = [20, 10 , 50];
 // User amount of caps from his adventures in the waste land
 var caps = 3000;
 
-var toatl = [];
 
+var totalStimpak = 0;
+var totalJet = 0;
+var totaDoctorBag = 0;
+
+var spentStimpak = 0;
+var spentJet = 0;
+var spentDoctorBag = 0;
 
 // Created a a while loop to keep ask user to buy items
 while(Buying){
@@ -103,10 +109,10 @@ while(Buying){
      /// Created itemspurches to store user answer
     var itemspurches = prompt(" (>^^)> Welcome wastelander " + FullName +" to Megaton clinic here are the my item for sale:"+
      // Display user money and choices
-    "\n"+ FullName + " Ammount of caps = " + caps +  "caps" + "\n" +
-        "1) " + items[0]+ " cost: " + itemscost[0] +" caps" +  "\n" +
-        "2) " + items[1]+ " cost: " + itemscost[1] +" caps" + "\n" +
-        "3) " + items[2]+ " cost: " + itemscost[2] +" caps" + "\n" +
+    "\n"+ FullName + " Ammount of caps = " + caps +  "cps" + "\n" +
+        "1) " + items[0]+ " cost: " + itemscost[0] +" cps" +  "\n" +
+        "2) " + items[1]+ " cost: " + itemscost[1] +" cps" + "\n" +
+        "3) " + items[2]+ " cost: " + itemscost[2] +" cps" + "\n" +
         "4) Cash out" );
 
     // If statement  used to exit the loop
@@ -116,18 +122,26 @@ while(Buying){
     if( parseInt(itemspurches) == 1){
         var ammount = prompt(items[0] + " Cost " + itemscost[0] +  " How much do you want to buy?" );
         caps = caps - itemscost[0] * parseInt(ammount);
-        total[0] = items[0] + ammount
+        totalStimpak +=  parseInt(ammount);
+        spentStimpak += parseInt(ammount) * parseInt(itemscost[0]);
     }else if( parseInt(itemspurches) == 2){
         var ammount2 = prompt(items[1] + " Cost " + itemscost[1] +  " How much do you want to buy?" );
         caps = caps - itemscost[1] * parseInt(ammount2);
+        totalJet += parseInt(ammount2);
+        spentJet += parseInt(itemscost[1]) * parseInt(ammount2);
     }else if( parseInt(itemspurches) == 3){
         var ammount3 = prompt(items[2] + " Cost " + itemscost[2] +  " How much do you want to buy?" );
         caps = caps - itemscost[2] * parseInt(ammount3);
+        totaDoctorBag += parseInt(ammount3);
+        spentDoctorBag += parseInt(ammount3) * parseInt(itemscost[2]);
     }
 
 }
-// Display remainder of user's caps 
-prompt(" You have a remainder of : " + caps);
+// Display remainder of user's caps
+prompt(" You have a remainder of : " + caps + "cps" +"\n" +
+    "Total Stimpak bought:" + totalStimpak +" spent : "+ spentStimpak +" cps" +  "\n" +
+    "Total Jet bought: " + totalJet +"  spent :" + spentJet  +" cps " + "\n" +
+    "Total Doctor Bog bought:" +totaDoctorBag +" spent: " + spentDoctorBag +" cps ");
 
 // If statment to see if you company is doing well
 if( TotalAfterEmpolyees > 0){
