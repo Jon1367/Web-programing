@@ -97,10 +97,12 @@ var caps = 3000;
 var toatl = [];
 
 
-
+// Created a a while loop to keep ask user to buy items
 while(Buying){
 
+     /// Created itemspurches to store user answer
     var itemspurches = prompt(" (>^^)> Welcome wastelander " + FullName +" to Megaton clinic here are the my item for sale:"+
+     // Display user money and choices
     "\n"+ FullName + " Ammount of caps = " + caps +  "caps" + "\n" +
         "1) " + items[0]+ " cost: " + itemscost[0] +" caps" +  "\n" +
         "2) " + items[1]+ " cost: " + itemscost[1] +" caps" + "\n" +
@@ -124,7 +126,7 @@ while(Buying){
     }
 
 }
-
+// Display remainder of user's caps 
 prompt(" You have a remainder of : " + caps);
 
 // If statment to see if you company is doing well
