@@ -103,10 +103,11 @@ var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "
 // Variables fo while condition
 var GuessingGame = true;
 
-// The guess for user
+// The guesses for user
 var NumberOfUserGuess = 0;
 var NumberOfWins = 0;
 
+// randomly created computer's guess
 var ComputerGuess = Math.floor(Math.random() * (100 + 1 -1 ) + 1);
 
 
@@ -116,29 +117,37 @@ while(GuessingGame){
     // Ask User to guess number between 1 - 100 ,
   var UserGuess = prompt (" (>^^)> Welcome to my Guessing Game. " + "\n" +" Guess my Number between 1 - 100" + "\n"+
       "4)Quit");
-    // randomly created computer's guess
 
+    // so i can check if program works
     prompt(ComputerGuess);
 
     // if statement to check if user guess the right number
    if( parseInt(UserGuess) == ComputerGuess ){
+
+       // The keepPlaying varaible is used to store the ans if user want to play game again
       var keepPlaying =  prompt("Congradulation! " + playerName + "  Do you want to play again? Y or N:");
 
+       // check if user enter the correct input for keepPlaying
        if(keepPlaying == 'y' || keepPlaying == 'Y'){GuessingGame = true}
        else if( keepPlaying == 'n' || keepPlaying == 'N'){GuessingGame = false}
-        
+       else{  prompt("Error 101: Hit Enter to countine...")   }
+       // store the number of wins;
        NumberOfWins++;
+    // check  if user's guess is too high
    }else if( parseInt(UserGuess) > ComputerGuess){
        prompt(playerName + " Guess too High Guess");
+       // stores number of guesses
        NumberOfUserGuess++;
+   // check if user's guess is too low
    }else if( parseInt(UserGuess) < ComputerGuess){
        prompt(playerName + " Guess too low");
        NumberOfUserGuess++;
    }
 
+    // if statement is user wants to stop playing game
    if(UserGuess == 4){ GuessingGame = false}
-
 
 }
 
-prompt("Number of guess:" + NumberOfUserGuess + "\n" + " Number of wins: " + NumberOfWins );
+// Display the end game results
+prompt(playerName + " stats: " + "\n "+"Number of guess:" + NumberOfUserGuess + "\n" + " Number of wins: " + NumberOfWins );
