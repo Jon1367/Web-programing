@@ -100,25 +100,45 @@ var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "
 
 }
 
+// Variables fo while condition
 var GuessingGame = true;
+
+// The guess for user
 var NumberOfUserGuess = 0;
 var NumberOfWins = 0;
 
+var ComputerGuess = Math.floor(Math.random() * (100 + 1 -1 ) + 1);
+
+
+// While loop countines as long as player exits the game
 while(GuessingGame){
 
-  var UserGuess = prompt (" (>^^)> Welcome to my Guessing Game. " + "\n" +" Guess my Number between 1 - 100" + "\n"+"4)Quit");
-  var ComputerGuess = Math.floor(Math.random() * (100 + 1 -1 ) + 1);
+    // Ask User to guess number between 1 - 100 ,
+  var UserGuess = prompt (" (>^^)> Welcome to my Guessing Game. " + "\n" +" Guess my Number between 1 - 100" + "\n"+
+      "4)Quit");
+    // randomly created computer's guess
 
-   if( UserGuess < ComputerGuess){
-       prompt(playerName + " Guess too low");
-   }else if( UserChoice > ComputerGuess){
+    prompt(ComputerGuess);
+
+    // if statement to check if user guess the right number
+   if( parseInt(UserGuess) == ComputerGuess ){
+      var keepPlaying =  prompt("Congradulation! " + playerName + "  Do you want to play again? Y or N:");
+
+       if(keepPlaying == 'y' || keepPlaying == 'Y'){GuessingGame = true}
+       else if( keepPlaying == 'n' || keepPlaying == 'N'){GuessingGame = false}
+        
+       NumberOfWins++;
+   }else if( parseInt(UserGuess) > ComputerGuess){
        prompt(playerName + " Guess too High Guess");
-   }else if( UserChoice == ComputerGuess ){
-
+       NumberOfUserGuess++;
+   }else if( parseInt(UserGuess) < ComputerGuess){
+       prompt(playerName + " Guess too low");
+       NumberOfUserGuess++;
    }
 
    if(UserGuess == 4){ GuessingGame = false}
 
 
-
 }
+
+prompt("Number of guess:" + NumberOfUserGuess + "\n" + " Number of wins: " + NumberOfWins );
