@@ -14,14 +14,21 @@ var Weaponsprice = [20, 50, 30];
 var Armor = ["Leather Armor","Iron Armor", "Dragon Armor"]
 var ArmorPrice = [100, 200, 300];
 
+// User's money
 var userMoney = 5000;
 
+//Amount Healthpotion
 var AmountOfHealthPotion = 0;
 var AmountOfPotion = 0;
 var TotalHealthPotion = 0;
 
-
+// Amount of  Empty bottle
+var AmountOfEmptyBottle = 0;
+var AmountOfpotion = 0;
 var TotalEmptyBottle = 0;
+
+
+
 
 var instore = true;
 
@@ -29,12 +36,12 @@ var instore = true;
 
 while(instore){
 
-var UserChoice  = prompt("(>^^)> Welcome to the Hyrlue here you can trade and purchuse items:" + "\n"
-    + "1) Potions " + "\n" +
+var UserChoice  = prompt("(>^^)> Welcome to the Hyrlue here you can trade and purchuse items:" + "\n" +
+    playerName + " has $" + userMoney + "\n" +
+     "1) Potions " + "\n" +
       "2) Weapons" + "\n" +
-      "3) Armor " + "\n" +
-      "4) Trade" + "\n" +
-      "5) Quit");
+      "3)Trade" + "\n" +
+      "4) Quit" + "\n" );
 
     //prompt(useritems[0]);
 
@@ -42,7 +49,7 @@ var UserChoice  = prompt("(>^^)> Welcome to the Hyrlue here you can trade and pu
 
    if(UserChoice == 1){
    var buypotions = prompt("(>^^)> These are the Potions i have avaiable: " + " \n" +
-    "a) " + potion[0] + " cost = $" + potionprice[0] + "\n" +
+    "a) " +                      potion[0] + " cost = $" + potionprice[0] + "\n" +
     "b) " + potion[1] + " cost = $" + potionprice[1] + "\n" +
     "c) " + potion[2] + " cost = $" + potionprice[2] + "\n");
         if( buypotions == 'a' || buypotions == 'A'){
@@ -51,8 +58,14 @@ var UserChoice  = prompt("(>^^)> Welcome to the Hyrlue here you can trade and pu
             TotalHealthPotion += parseInt(amount);
 
         }else if( buypotions == 'b' || buypotions == 'B'){
-            var amount2 = prompt(potion[1] +" cost " + potionprice[1]);
+            var amount2 = prompt(potion[1] +" cost " + potionprice[1] + "How many do you want?");
             userMoney += potionprice[1] + parseInt(amount2);
+            TotalEmptyBottle += parseInt(amount2);
+
+        }else if( buypotions == 'c' || buypotions == 'C'){
+            var amount3 = prompt(potion[2] + " cost " + potionprice[2] + "How many do you want?" );
+            userMoney += potionprice[0] + parseInt(amount3);
+            TotalOil += parseInt(amount3)
 
         }
 
@@ -66,13 +79,15 @@ var UserChoice  = prompt("(>^^)> Welcome to the Hyrlue here you can trade and pu
        }
 
    }else if( UserChoice == 3){
-    var weaponamount = prompt("(>^^)>  Here are your option for armor: " + "\n" +
-        " a) " + Armor[0] + " cost = S" + ArmorPrice[0] + "\n" +
-        " b) " + Armor[1] + " cost = S" + ArmorPrice[1] + "\n" +
-        " c) " + Armor[2] + " cost = S" + ArmorPrice[2] + "\n" +
-    )
+
    }
+
 
     if(instore == 5){ instore = false}
 
 }
+
+prompt(" You have " + userMoney + "\n" +
+      "Total Health" + TotalHealthPotion + "\n" +
+       "Total Empty Bottle" + TotalEmptyBottle + "\n" +
+       "Total Oil" + TotalOil + "\n");
