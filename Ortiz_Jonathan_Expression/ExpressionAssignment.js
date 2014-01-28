@@ -151,8 +151,7 @@ prompt(" You have a remainder of : " + caps + "cps" +"\n" +
     "Total Stimpak bought:" + totalStimpak +" spent : "+ spentStimpak +" cps" +  "\n" +
     "Total Jet bought: " + totalJet +"  spent :" + spentJet  +" cps " + "\n" +
     "Total Doctor Bog bought:" +totaDoctorBag +" spent: " + spentDoctorBag +" cps ");
-
-// If statment to see if you company is doing well
+                  //If statment to see if you company is doing well
 if( TotalAfterEmpolyees > 0){
     console.log(" (>^^)> Good Job your company didn't go Under");
 }
