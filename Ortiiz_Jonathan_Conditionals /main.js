@@ -28,8 +28,11 @@ var Paper =2;
 var Sisscors = 3;
 
 // Display options to user
-var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "\n" + "2) Paper" + "\n" + "3) Sisscors"
-    + "\n" + "4) Quit or Next game");
+var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" +
+    "1) Rock" + "\n" +
+    "2) Paper" + "\n" +
+    "3) Sisscors" + "\n" +
+    "4) Quit or Next game");
 
     // Check if user enter correct input
     if( UserChoice != Rock && UserChoice != Paper && UserChoice != Sisscors && UserChoice != 4){
@@ -68,6 +71,7 @@ var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "
         prompt(" Sisscors Tie");
         Tie++;
     }
+    // quit game
     if( UserChoice == 4 ){ Quit = false}
 
 
@@ -92,7 +96,7 @@ var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" + "1) Rock" + "
         prompt("(>^^)> computer wins! rock smashes sisscors.");
         ComputerScore++;
     }else if( parseInt(UserChoice) == Sisscors && computerChoice ==Paper ){
-        prompt(playerName + " Wins! sisscors cut paper.");
+        prompt(playerName + " Wins! sisscors cuts paper.");
         UserScore++;
     }
     // Show the User The scores
@@ -107,16 +111,19 @@ var GuessingGame = true;
 var NumberOfUserGuess = 0;
 var NumberOfWins = 0;
 
-// randomly created computer's guess
-var ComputerGuess = Math.floor(Math.random() * (100 + 1 -1 ) + 1);
+
 
 
 // While loop countines as long as player exits the game
 while(GuessingGame){
 
-    // Ask User to guess number between 1 - 100 ,
-  var UserGuess = prompt (" (>^^)> Welcome to my Guessing Game. " + "\n" +" Guess my Number between 1 - 100" + "\n"+
-      "4)Quit");
+    // randomly created computer's guess
+    var ComputerGuess = Math.floor(Math.random() * (10 - 5 + 1 ) + 5);
+
+    // Ask User to guess number between 5 - 10 ,
+  var UserGuess = prompt (" (>^^)> Welcome to my Guessing Game. " + "\n" +"" +
+      " Guess my Number between 5 - 10" + "\n"+
+      "4) Quit");
 
     // so i can check if program works
     prompt(ComputerGuess);
@@ -133,14 +140,15 @@ while(GuessingGame){
        else{  prompt("Error 101: Hit Enter to countine...")   }
        // store the number of wins;
        NumberOfWins++;
+
     // check  if user's guess is too high
    }else if( parseInt(UserGuess) > ComputerGuess){
-       prompt(playerName + " Guess too High Guess");
+       prompt(playerName + " Guess too High. My guess was: " + ComputerGuess);
        // stores number of guesses
        NumberOfUserGuess++;
    // check if user's guess is too low
    }else if( parseInt(UserGuess) < ComputerGuess){
-       prompt(playerName + " Guess too low");
+       prompt(playerName + " Guess too Low. My guess was " + ComputerGuess);
        NumberOfUserGuess++;
    }
 
