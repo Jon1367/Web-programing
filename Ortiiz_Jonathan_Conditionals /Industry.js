@@ -74,6 +74,7 @@ var UserChoice  = prompt("(>^^)> Welcome to the Hyrlue here you can trade and pu
     "a) " + Weapons[0] + " cost = $" + Weaponsprice[0] + "\n" +
     "b) " + Weapons[1] + " cost = $" + Weaponsprice[1] + "\n" +
     "c) " + Weapons[2] + " cost = $" + Weaponsprice[2] + "\n");
+
        if( buyweapons == 'a' || buypotions == 'A'){
            var want = prompt( Weapons[0] + " cost " + Weaponsprice[0] + " How many do you want?");
            userMoney -= Weaponsprice[0] * parseInt(want);
@@ -103,6 +104,7 @@ var UserChoice  = prompt("(>^^)> Welcome to the Hyrlue here you can trade and pu
            "a) Potion" + "\n" +
            "b) Weapons" + "\n" +
            "f) Finish selling");
+
                 if( sell == 'a' || sell == 'A'){
                     var SellPotion = prompt(" Which potion would you like to sell " + "\n" +
                     "j) " + potion[0] + " sells for $" + potionprice[0] / 2 + "\n" +
@@ -131,21 +133,21 @@ var UserChoice  = prompt("(>^^)> Welcome to the Hyrlue here you can trade and pu
                             "k) " + Weapons[1] + " sells for $ " + Weaponsprice[1] / 2 + "\n" +
                             "l) " +  Weapons[2] + " sells for $ " + Weaponsprice[2] / 2 );
 
-                        if( SellWeapon == 'j' || SellPotion == 'J'){
+                            if( SellWeapon == 'j' || SellPotion == 'J'){
                             var SellSword = prompt(" How  many swords would you like to sell:");
                             totalSword -= parseInt(SellSword);
                             userMoney += potionprice[0] / 2 * parseInt(SellSword);
-                        }else if( SellWeapon == 'k' || SellPotion == 'K'){
+                             }else if( SellWeapon == 'k' || SellPotion == 'K'){
                             var SellHammer = prompt(" How many Hammers would you like to sell:");
                             totalHammer -= parseInt(SellHammer);
                             userMoney += potionprice[1] / 2 * parseInt(SellHammer);
-                        }else if( SellWeapon == 'l' || SellPotion == 'L'){
+                             }else if( SellWeapon == 'l' || SellPotion == 'L'){
                             var SellBow = prompt(" How many Bows would you like to sell:");
                             totalBow -= parseInt(SellBow);
                             userMoney += potionprice[2] / 2 * parseInt(SellBow);
-                        }else{
+                            }else{
                             prompt("Error");
-                        }
+                            }
 
                 }else if( sell == "f" || sell == "f"){
                     selling = false;
@@ -153,15 +155,13 @@ var UserChoice  = prompt("(>^^)> Welcome to the Hyrlue here you can trade and pu
 
        }
 
-   }else{
-       prompt("Error 101:");
    }
 
+    // other way to exit loop if loop breaks it's useless now with dubuging done
+    //if(instore == 5){ instore = false}
 
-    if(instore == 5){ instore = false}
 
-
-
+// Display User money and total amount of items
 prompt(" You have " + userMoney + "\n" +
       "Total Health" + TotalHealthPotion + "\n" +
       "Total Empty Bottle:" + TotalEmptyBottle + "\n" +

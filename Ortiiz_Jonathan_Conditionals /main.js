@@ -100,7 +100,9 @@ var UserChoice = prompt(" (>^^)> Here are your choices: " + "\n" +
         UserScore++;
     }
     // Show the User The scores
-    prompt(playerName + " Score = " + UserScore + "\n" +"Computer Score = " + ComputerScore + "\n"+" Tie = " + Tie  );
+    prompt(playerName + " Score = " + UserScore + "\n" +
+        "Computer Score = " + ComputerScore + "\n"+
+        " Tie = " + Tie  );
 
 }
 
