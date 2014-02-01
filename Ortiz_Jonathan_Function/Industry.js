@@ -5,6 +5,16 @@
     // Loop condition
 var MathbotMessenger = true;
 
+var contactlist = [];
+    contactlist[0] = 'Jonathan';
+
+var email = [];
+    email[0] = 'Jonathano1367@yahoo.com';
+
+var phoneNumber= [];
+    phoneNumber[0] = ("310 - 717 - 3095")
+
+
 // loop for program
 while(MathbotMessenger){
     // Get user dessecion
@@ -20,31 +30,40 @@ while(MathbotMessenger){
     if(userInput == 1){
 
     }else if(userInput == 2){
-
+        AddContact();
     }else if(userInput == 3){
-        prompt(contacts());
+        contacts();
     }else(prompt("Error"));
 }
 
-function contacts(list,name,email,phoneNumber){
+function contacts(){
 
-    list = [];
-    name = [];
-    email = [];
-    phoneNumber = [];
-    list[0] = "Jonathan Ortiz";
-    list[1] = "Corey Davenport";
-    list[2] = "Donald  Page";
 
-   for(i = 0; i < list.length;i++){
-       console.log(list[i] + "\n");
+   for(i = 0; i < contactlist.length;i++){
+       for(j = 0; j < email.length;j++){
+           for(x = 0;x < phoneNumber.length;x++){
+
+
+               console.log(phoneNumber[x] + "\n ");
+           }
+           console.log(email[j] + "\n");
+           console.log(contactlist[i] + "\n");
+       }
+
    }
 
 }
-function AddContact(name,email,phoneNumber){
+function AddContact(){
 
-    
-}
+    contactlist[contactlist.length] = prompt("What is his name:");
+
+    email[email.length] = prompt("what is their email adress:");
+
+    phoneNumber[phoneNumber.length] = prompt("What is their phone number:");
+
+
+        return contactlist, email, phoneNumber;
+    }
 function Sent(){
 
 }function quit(){

@@ -65,6 +65,7 @@ function math(){
     var total = parseInt(UsersNumber[0]) + parseInt(UsersNumber[1]) + parseInt(UsersNumber[2]);
     var Muilt = parseInt(UsersNumber[0]) + parseInt(UsersNumber[1]) + parseInt(UsersNumber[2]);
     var divide = parseInt(UsersNumber[0]) / parseInt(UsersNumber[1])  %  parseInt(UsersNumber[2]);
+
     // give user a choice
     var mathchoice = prompt(" (>^^)>  What kind of math would you like to do with your numbers?" +"\n" +
                              "a) Add my numbers " + "\n" +
@@ -109,13 +110,13 @@ function theory(){
 
     while(testTheory){
 
-    var random = Math.floor(math() * (3 - 1 + 1) + 1);
+    var random = Math.floor(Math.random() * (3 - 1 + 1) + 1);
 
 
     var user = prompt("(>^^)>  Theory of probability is you are more likely to guess the right choice " + "\n" +
                             "if you make  a choice then change it." +"\n" +
-                                "results:" + "\n" +
-                                  "guess  right = " + guessright + " guess wrong = " + guesswrong + "\n" +
+                                  "try 10 times results:" + "\n" +
+                                   "guess  right = " + guessright + " guess wrong = " + guesswrong + "\n" +
                                    " Theory right = " + theoryguessright + " wrong = " + theoryguesswrong + "\n" +
                                     "j) guess " + "\n" +
                                     "k) theory" + "\n" +
@@ -125,7 +126,7 @@ function theory(){
                                   var guess  = prompt( "1) (>^^)> 2) (>^^)> 3) (>^^)>" + "\n"+
                                  " (>^^)> Which one is the real Math bot:");
 
-                                 if(guess = random){
+                                 if(guess == random){
                                      prompt("You guess right my guess was:" + random);
                                      guessright++;
                                  }else if(guess != random){
@@ -135,11 +136,11 @@ function theory(){
 
 
                              }else if(user == 'k' || user == 'K' ){
-                                var guess2 = prompt("1) (>^^)> 2) (>^^)> 3) (>^^)>" + "\n"+
-                                     " This time make a chose then before you enter a number change your choice " + "\n" +
-                                     " (>^^)> Which of your numbers did i chose:");
+                                var guess2 = prompt("This time make a chose then before you enter a number change your choice " + "\n" +
+                                     " +1) (>^^)> 2) (>^^)> 3) (>^^)>" + "\n"+
+                                     " (>^^)>  Which one is the real Math bot:");
 
-                                 if(guess2 = random){
+                                 if(guess2 == random){
                                      prompt("You guess right" + " guess was :" + random);
                                      theoryguessright++;
                                  }else if(guess2 != random){
