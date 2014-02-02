@@ -44,7 +44,7 @@ function contacts(){
            for(x = 0;x < phoneNumber.length;x++){
 
 
-               console.log(contactlist[i] + "\n" + phoneNumber[x] + "\n" + email[j]);
+               console.log(contactlist[i] + "\n" + phoneNumber[i] + "\n" + email[i]);
 //               console.log(phoneNumber[x] + "\n ");
 //               console.log(email[j] + "\n");
 

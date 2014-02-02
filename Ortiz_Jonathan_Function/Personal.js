@@ -12,14 +12,14 @@ var last =prompt(" What is your last name");
 var UsersNumber = [ 'a', 'b' ,'c' ];
 
 // created a function to return username when called
-function name( fullname){
+function name( first, last){
 
-    fullname = first + " " +  last;
+    var fullname = first + " " +  last;
     return fullname;
 }
 
 // Display user's full  name and enter choice for a b c
-prompt(" Hello " + name() + " (>^^)> Math bot learn to use Function to solve problems: " +"\n");
+prompt(" Hello " + name(first,last) + " (>^^)> Math bot learn to use Function to solve problems: " +"\n");
          UsersNumber[0] =  prompt(" Enter a number for a:");
          UsersNumber[1] =  prompt(" Enter a number for b:");
          UsersNumber[2] =  prompt(" Enter a number for c:");
@@ -100,6 +100,7 @@ return true;
 }
 function theory(){
 
+    // variables to keep track of amount of guess for theory
     var guessright = 0;
     var guesswrong = 0;
 
@@ -107,12 +108,13 @@ function theory(){
     var   theoryguesswrong = 0;
 
     var testTheory = true;
-
+    // loop to keep guessing
     while(testTheory){
 
+    // Have computer be a random number between 1 or 3
     var random = Math.floor(Math.random() * (3 - 1 + 1) + 1);
 
-
+    // Testing theory
     var user = prompt("(>^^)>  Theory of probability is you are more likely to guess the right choice " + "\n" +
                             "if you make  a choice then change it." +"\n" +
                                   "try 10 times results:" + "\n" +
@@ -121,7 +123,7 @@ function theory(){
                                     "j) guess " + "\n" +
                                     "k) theory" + "\n" +
                                     "l) quit");
-
+                              // if user guess right then store if right or wrong
                              if(user == 'j' || user == 'J'){
                                   var guess  = prompt( "1) (>^^)> 2) (>^^)> 3) (>^^)>" + "\n"+
                                  " (>^^)> Which one is the real Math bot:");
@@ -148,7 +150,7 @@ function theory(){
                                      theoryguesswrong++;
                                  }
 
-
+                             // Quit loop
                              }else if( user == 'l' || user == 'L'){
                                  testTheory = false;
                              }
