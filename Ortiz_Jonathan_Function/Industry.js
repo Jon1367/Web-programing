@@ -44,10 +44,17 @@ function contacts(){
            for(x = 0;x < phoneNumber.length;x++){
 
 
-               console.log(phoneNumber[x] + "\n ");
+               console.log(contactlist[i] + "\n" + phoneNumber[x] + "\n" + email[j]);
+//               console.log(phoneNumber[x] + "\n ");
+//               console.log(email[j] + "\n");
+
+               if(contactlist.maxLength && phoneNumber.maxLength & email.maxLength){
+                   break;
+               }
+
            }
-           console.log(email[j] + "\n");
-           console.log(contactlist[i] + "\n");
+
+
        }
 
    }
@@ -62,11 +69,10 @@ function AddContact(){
     phoneNumber[phoneNumber.length] = prompt("What is their phone number:");
 
 
-        return contactlist, email, phoneNumber;
+        //return contactlist, email, phoneNumber;
     }
-function Sent(){
 
-}function quit(){
+function quit(){
 
     MathbotMessenger = false;
     return MathbotMessenger;
