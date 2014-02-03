@@ -40,23 +40,8 @@ function contacts(){
 
 
    for(i = 0; i < contactlist.length;i++){
-       for(j = 0; j < email.length;j++){
-           for(x = 0;x < phoneNumber.length;x++){
 
-
-               console.log(contactlist[i] + "\n" + phoneNumber[i] + "\n" + email[i]);
-//               console.log(phoneNumber[x] + "\n ");
-//               console.log(email[j] + "\n");
-
-               if(contactlist.maxLength && phoneNumber.maxLength & email.maxLength){
-                   break;
-               }
-
-           }
-
-
-       }
-
+       console.log(contactlist[i] + "\n" + phoneNumber[i] + "\n" + email[i]);
    }
 
 }
@@ -70,7 +55,7 @@ function AddContact(){
 
 
         //return contactlist, email, phoneNumber;
-    }
+}
 
 function quit(){
 
