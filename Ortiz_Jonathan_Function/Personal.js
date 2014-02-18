@@ -19,7 +19,7 @@ function name( first, last){
 }
 
 // Display user's full  name and enter choice for a b c
-prompt(" Hello " + name(first,last) + " (>^^)> Math bot learn to use Function to solve problems: " +"\n");
+prompt(" Hello " + name(first,last) + " (>^^)> i'm Math bot and i learn to use Function to solve problems: " +"\n");
          UsersNumber[0] =  prompt(" Enter a number for a:");
          UsersNumber[1] =  prompt(" Enter a number for b:");
          UsersNumber[2] =  prompt(" Enter a number for c:");
@@ -28,7 +28,7 @@ prompt(" Hello " + name(first,last) + " (>^^)> Math bot learn to use Function to
 var game = true;
 while(game){
 // Created a variable choice to score user choice
-var choice = prompt(" (>^^)>  What would you like to do with a , b c:" + "\n" +
+var choice = prompt(" (>^^)>  What would you like to do with a , b , c :" + "\n" +
         " 1)Math " + "\n" +
         " 2)Change numbers " + "\n" +
          "3)Theory of probability " + "\n"  +
@@ -115,7 +115,7 @@ function theory(){
     var random = Math.floor(Math.random() * (3 - 1 + 1) + 1);
 
     // Testing theory
-    var user = prompt("(>^^)>  Theory of probability is you are more likely to guess the right choice " + "\n" +
+    var user = prompt("(>^^)>  Theory of probability is the theory that you are more likely to guess the right choice " + "\n" +
                             "if you make  a choice then change it." +"\n" +
                                   "try 10 times results:" + "\n" +
                                    "guess  right = " + guessright + " guess wrong = " + guesswrong + "\n" +
@@ -138,7 +138,7 @@ function theory(){
 
 
                              }else if(user == 'k' || user == 'K' ){
-                                var guess2 = prompt("This time make a chose then before you enter a number change your choice " + "\n" +
+                                var guess2 = prompt("This time make a choice then before you enter a number change your choice " + "\n" +
                                      " +1) (>^^)> 2) (>^^)> 3) (>^^)>" + "\n"+
                                      " (>^^)>  Which one is the real Math bot:");
 

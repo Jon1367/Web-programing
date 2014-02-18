@@ -28,7 +28,7 @@ while(MathbotMessenger){
 
     // if statement to call functions
     if(userInput == 1){
-
+        info();
     }else if(userInput == 2){
         AddContact();
     }else if(userInput == 3){
@@ -40,7 +40,7 @@ function contacts(){
 
 
    for(i = 0; i < contactlist.length;i++){
-
+        clear();
        console.log(contactlist[i] + "\n" + phoneNumber[i] + "\n" + email[i]);
    }
 
@@ -61,4 +61,10 @@ function quit(){
 
     MathbotMessenger = false;
     return MathbotMessenger;
+}
+
+function info(){
+    var message = prompt("Who would you like to message;");
+
+    contactlist[message] = prompt(" What would you like to say:")
 }
