@@ -17,6 +17,7 @@ Date:2/25/2014
 
     // Created a prototype to add to Student and create a function
     Student.prototype.average = function(){
+
      console.log(this.gpa);
         var total = 0;
         for(var i = 0; i < this.gpa.length;i++){
@@ -51,9 +52,7 @@ Date:2/25/2014
 
     }
 
-    function average(){
 
-    }
     //console.log(studentList[0].average())
 
     function display(e){

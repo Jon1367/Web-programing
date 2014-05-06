@@ -21,7 +21,7 @@
 
     //draw a rectangle with fill and stroke
     ctx.beginPath();
-    ctx.fillStyle = "ff0000";// defines a fill collor
+    ctx.fillStyle = "ff0000";// defines a fill color
     ctx.rect(175,175,50,50)// defines the rectangle at x = 175 with a width and height
     ctx.fill(); // renders the fill
     ctx.lineWidth = 3;

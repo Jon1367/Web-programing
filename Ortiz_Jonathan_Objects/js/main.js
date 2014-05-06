@@ -3,27 +3,60 @@
  * Class: PWA
  * Goal: Goal7
  */
+(function(){
 
-//var name = ["jon","pat","cory","Don","scott"];
 
+var names = ["jon","pat","cory","Don","scott"];
+
+var p = [~~(Math.random() * names.length)];
+
+    names.splice(names.indexOf(p),1);
 var people = [];
 
-function Person(){
+var int = setInterval(update,3000);
 
-   this.name = "";
-   this.job = "";
-   this.action = "";
+var name = document.querySelector("#r1c1");
+var job = document.querySelector("#r1c2");
+var action = document.querySelector("#r1c3");
+
+var name2 = document.querySelector("#r2c1");
+var job2 = document.querySelector("#r2c2");
+var action2 = document.querySelector("#r2c3");
+
+var name3 = document.querySelector("#r3c1");
+var job3 = document.querySelector("#r3c2");
+var action3 = document.querySelector("#r3c3");
+
+
+
+function update(){
+
+    action.innerHTML = people[0].actions();
+    action2.innerHTML = people[1].actions();
+    action3.innerHTML = people[2].actions();
+
 
 }
 
-Person.name = ["Jon","Pat","Cory","Don","Scott"];
+function populateHTML (){
 
-function generateHTML(){
-
-    for(var i = 0; i < Person.name.length;i++){
+    for(var i = 0; i < 3;i++){
         var person = new Person();
         people.push(person);
     }
+
+    name.innerHTML = people[0].name;
+    name2.innerHTML = people[1].name;
+    name3.innerHTML = people[2].name;
+
+    job.innerHTML = people[0].job;
+    job2.innerHTML = people[1].job;
+    job3.innerHTML = people[2].job;
+
+
 }
 
+    populateHTML();
+    update();
+})();
 
